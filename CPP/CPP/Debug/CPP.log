@@ -1,2 +1,9 @@
-﻿  phrase_reverse.cpp
-  CPP.vcxproj -> D:\C++ Projects\CPP-Serge-Lansiquot\CPP\Debug\CPP.exe
+﻿  CustomTypes.cpp
+d:\c++ projects\cpp-serge-lansiquot\cpp\cpp\customtypes.cpp(21): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+d:\c++ projects\cpp-serge-lansiquot\cpp\cpp\customtypes.cpp(23): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+  phrase_reverse.cpp
+  PointerToPointer.cpp
+d:\c++ projects\cpp-serge-lansiquot\cpp\cpp\pointertopointer.cpp(9): warning C4101: 'arr': unreferenced local variable
+  Generating Code...

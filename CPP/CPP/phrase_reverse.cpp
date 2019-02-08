@@ -6,7 +6,7 @@ using namespace std;
 
 char* ReverseCopy(char * phrase);
 
-int main()
+int main5()
 {
 	const int MAX_BUFFER_LENGTH = 256;
 	char buffer[MAX_BUFFER_LENGTH];
