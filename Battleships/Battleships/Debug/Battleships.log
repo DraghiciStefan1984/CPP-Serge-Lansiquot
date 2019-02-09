@@ -1,2 +1,3 @@
 ﻿  Battleships.cpp
+d:\c++ projects\cpp-serge-lansiquot\battleships\battleships\battleships.cpp(324): warning C4101: 'orientation': unreferenced local variable
   Battleships.vcxproj -> D:\C++ Projects\CPP-Serge-Lansiquot\Battleships\Debug\Battleships.exe
