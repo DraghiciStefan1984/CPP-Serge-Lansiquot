@@ -1,0 +1,3 @@
+﻿  CPP2.cpp
+d:\c++ projects\cpp-serge-lansiquot\cpp2\cpp2\cpp2.cpp(23): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
+  CPP2.vcxproj -> D:\C++ Projects\CPP-Serge-Lansiquot\CPP2\Debug\CPP2.exe
