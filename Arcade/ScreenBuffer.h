@@ -1,6 +1,7 @@
 #pragma once
 #include "SDL.h"
 #include "Color.h"
+#include <cassert>
 #include <stdint.h>
 
 struct SDL_Surface;

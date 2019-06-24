@@ -4,6 +4,7 @@
 #include <iostream>
 #include "SDL.h"
 #include "Color.h"
+#include "ScreenBuffer.h"
 using namespace std;
 
 const int SCREEN_WIDTH = 224;
@@ -24,7 +25,10 @@ int main(int argc, char* argv[])
 	SDL_PixelFormat* pixelFormat = noPtrWindowSurface->format;
 	cout << "Window pixel format is: " << SDL_GetPixelFormatName(pixelFormat->format) << endl;
 	Color::InitColorFormat(pixelFormat);
-	//SetPixel(noPtrWindowSurface, Color::Red().GetPixelColor(), SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+	ScreenBuffer screenBuffer;
+	screenBuffer.Init(pixelFormat->format, noPtrWindowSurface->w, noPtrWindowSurface->h);
+	screenBuffer.SetPixel(Color::Red(), SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+	SDL_BlitSurface(screenBuffer.GetSurface(), nullptr, noPtrWindowSurface, nullptr);
 	SDL_UpdateWindowSurface(optrWindow);
 
 	SDL_Event sdlEvent;
