@@ -9,9 +9,6 @@ using namespace std;
 const int SCREEN_WIDTH = 224;
 const int SCREEN_HEIGHT = 288;
 
-void SetPixel(SDL_Surface* noPtrWindowSurface, uint32_t color, int x, int y);
-size_t GetIndex(SDL_Surface* noPtrSurface, int r, int c);
-
 int main(int argc, char* argv[])
 {
 	if (SDL_Init(SDL_INIT_VIDEO)) cout << "SDL init failed!!!" << endl;
@@ -27,7 +24,7 @@ int main(int argc, char* argv[])
 	SDL_PixelFormat* pixelFormat = noPtrWindowSurface->format;
 	cout << "Window pixel format is: " << SDL_GetPixelFormatName(pixelFormat->format) << endl;
 	Color::InitColorFormat(pixelFormat);
-	SetPixel(noPtrWindowSurface, Color::Red().GetPixelColor(), SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+	//SetPixel(noPtrWindowSurface, Color::Red().GetPixelColor(), SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
 	SDL_UpdateWindowSurface(optrWindow);
 
 	SDL_Event sdlEvent;
@@ -52,13 +49,3 @@ int main(int argc, char* argv[])
 	return EXIT_SUCCESS;
 }
 
-void SetPixel(SDL_Surface* noPtrWindowSurface, uint32_t color, int x, int y)
-{
-	SDL_LockSurface(noPtrWindowSurface);
-	uint32_t* pixels =(uint32_t*) noPtrWindowSurface->pixels;
-	size_t index = GetIndex(noPtrWindowSurface, y, x);
-	pixels[index] = color;
-	SDL_UnlockSurface(noPtrWindowSurface);
-}
-
-size_t GetIndex(SDL_Surface* noPtrSurface, int r, int c) { return r * noPtrSurface->w + c; }
