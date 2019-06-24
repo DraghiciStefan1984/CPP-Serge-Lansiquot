@@ -3,21 +3,32 @@
 
 #include <iostream>
 #include "SDL.h"
+#include "Color.h"
 using namespace std;
 
 const int SCREEN_WIDTH = 224;
 const int SCREEN_HEIGHT = 288;
 
+void SetPixel(SDL_Surface* noPtrWindowSurface, uint32_t color, int x, int y);
+size_t GetIndex(SDL_Surface* noPtrSurface, int r, int c);
+
 int main(int argc, char* argv[])
 {
 	if (SDL_Init(SDL_INIT_VIDEO)) cout << "SDL init failed!!!" << endl;
- 	SDL_Window* window = SDL_CreateWindow("Arcade", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+ 	SDL_Window* optrWindow = SDL_CreateWindow("Arcade", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
 	
-	if (window == nullptr)
+	if (optrWindow == nullptr)
 	{
 		cout << "Cannot create window: " << SDL_GetError() << endl;
 		return EXIT_FAILURE;
 	}
+
+	SDL_Surface* noPtrWindowSurface = SDL_GetWindowSurface(optrWindow);
+	SDL_PixelFormat* pixelFormat = noPtrWindowSurface->format;
+	cout << "Window pixel format is: " << SDL_GetPixelFormatName(pixelFormat->format) << endl;
+	Color::InitColorFormat(pixelFormat);
+	SetPixel(noPtrWindowSurface, Color::Red().GetPixelColor(), SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+	SDL_UpdateWindowSurface(optrWindow);
 
 	SDL_Event sdlEvent;
 	bool running = true;
@@ -35,8 +46,19 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	SDL_DestroyWindow(window);
+	SDL_DestroyWindow(optrWindow);
 	SDL_Quit();
 
 	return EXIT_SUCCESS;
 }
+
+void SetPixel(SDL_Surface* noPtrWindowSurface, uint32_t color, int x, int y)
+{
+	SDL_LockSurface(noPtrWindowSurface);
+	uint32_t* pixels =(uint32_t*) noPtrWindowSurface->pixels;
+	size_t index = GetIndex(noPtrWindowSurface, y, x);
+	pixels[index] = color;
+	SDL_UnlockSurface(noPtrWindowSurface);
+}
+
+size_t GetIndex(SDL_Surface* noPtrSurface, int r, int c) { return r * noPtrSurface->w + c; }
