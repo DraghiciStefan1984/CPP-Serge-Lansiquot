@@ -165,10 +165,12 @@
   <ItemGroup>
     <ClCompile Include="Arcade.cpp" />
     <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Screen.cpp" />
     <ClCompile Include="ScreenBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Color.h" />
+    <ClInclude Include="Screen.h" />
     <ClInclude Include="ScreenBuffer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
