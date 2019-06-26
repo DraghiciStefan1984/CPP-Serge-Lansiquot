@@ -2,16 +2,18 @@
 #include <stdint.h>
 #include <iostream>
 #include <cassert>
+#include <cmath>
 #include "SDL.h"
 #include "ScreenBuffer.h"
 #include "Color.h"
+#include "Utils/Vec2D.h"
+#include "Line2D.h"
 
 using namespace std;
 
 struct SDL_Window;
 struct SDL_Surface;
-
-class Vec2D;
+class Line2D;
 
 class Screen
 {
@@ -37,5 +39,6 @@ public:
 	inline uint32_t Height() const { return mHeight; }
 	void Draw(int x, int y, const Color& color);
 	void Draw(const Vec2D& point, const Color& color);
+	void Draw(const Line2D& line, const Color& color);
 };
 

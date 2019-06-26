@@ -5,6 +5,7 @@
 #include "SDL.h"
 #include "Color.h"
 #include "Screen.h"
+#include "Line2D.h"
 using namespace std;
 
 const int SCREEN_WIDTH = 224;
@@ -15,6 +16,8 @@ int main(int argc, char* argv[])
 {
 	Screen screen;
 	screen.Init(SCREEN_WIDTH, SCREEN_HEIGHT, MAGNIFICATION);
+	Line2D line = { Vec2D(0,0), Vec2D(SCREEN_WIDTH, SCREEN_HEIGHT) };
+	screen.Draw(line, Color::White());
 	screen.Draw(SCREEN_WIDTH/2, SCREEN_HEIGHT/2, Color::Green());
 	screen.SwapScreens();
 
