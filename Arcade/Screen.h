@@ -6,7 +6,7 @@
 #include "SDL.h"
 #include "ScreenBuffer.h"
 #include "Color.h"
-#include "Utils/Vec2D.h"
+#include "Vec2D.h"
 #include "Line2D.h"
 
 using namespace std;

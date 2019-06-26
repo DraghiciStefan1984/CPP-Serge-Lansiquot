@@ -2,8 +2,8 @@
 #include <iostream>
 #include <cmath>
 #include "SDL.h"
-#include "Utils/Utils.h"
-#include "Utils/Vec2D.h"
+#include "Utils.h"
+#include "Vec2D.h"
 
 using namespace std;
 
