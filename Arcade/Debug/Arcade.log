@@ -1,2 +1,8 @@
-﻿  Shape.cpp
+﻿  Circle.cpp
+  AARectangle.cpp
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\AARectangle.cpp(51,108): warning C4244:  'argument': conversion from 'float' to 'unsigned int', possible loss of data
+  Shape.cpp
+  Triangle.cpp
+  Generating Code...
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\AARectangle.cpp(51,70): warning C4244:  'argument': conversion from 'float' to 'unsigned int', possible loss of data
   Arcade.vcxproj -> D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Debug\Arcade.exe
