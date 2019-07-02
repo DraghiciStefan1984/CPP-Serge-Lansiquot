@@ -1,16 +1,2 @@
-﻿  Arcade.cpp
-  Color.cpp
-  Line2D.cpp
-  Screen.cpp
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Line2D.cpp(20,30): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(69,71): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(69,57): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(78,10): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(79,10): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(80,10): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
-  ScreenBuffer.cpp
-  Utils.cpp
-  Vec2D.cpp
-  Generating Code...
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(81,10): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+﻿  Shape.cpp
   Arcade.vcxproj -> D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Debug\Arcade.exe
