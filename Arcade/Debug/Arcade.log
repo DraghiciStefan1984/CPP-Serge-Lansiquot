@@ -1,8 +1,16 @@
-﻿  Circle.cpp
-  AARectangle.cpp
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\AARectangle.cpp(51,108): warning C4244:  'argument': conversion from 'float' to 'unsigned int', possible loss of data
-  Shape.cpp
-  Triangle.cpp
+﻿  Arcade.cpp
+  Screen.cpp
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(76,19): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(105,22): warning C4244:  'initializing': conversion from '_Ty' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(105,22): warning C4244:         with
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(105,22): warning C4244:         [
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(105,22): warning C4244:             _Ty=float
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(105,22): warning C4244:         ]
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(122,71): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(122,57): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(131,10): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(132,10): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(133,10): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
   Generating Code...
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\AARectangle.cpp(51,70): warning C4244:  'argument': conversion from 'float' to 'unsigned int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(134,10): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
   Arcade.vcxproj -> D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Debug\Arcade.exe

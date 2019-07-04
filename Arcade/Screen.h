@@ -3,11 +3,17 @@
 #include <iostream>
 #include <cassert>
 #include <cmath>
+#include <vector>
+#include <algorithm>
 #include "SDL.h"
 #include "ScreenBuffer.h"
 #include "Color.h"
 #include "Vec2D.h"
 #include "Line2D.h"
+#include "Triangle.h"
+#include "AARectangle.h"
+#include "Circle.h"
+#include "Utils.h"
 
 using namespace std;
 
@@ -27,6 +33,7 @@ private:
 	SDL_Surface* mnoptrWindowSurface;
 
 	void ClearScreen();
+	void FillPoly(const vector<Vec2D>& points, const Color color);
 
 public:
 	Screen();
@@ -40,5 +47,8 @@ public:
 	void Draw(int x, int y, const Color& color);
 	void Draw(const Vec2D& point, const Color& color);
 	void Draw(const Line2D& line, const Color& color);
+	void Draw(const Triangle& triangle, const Color& color, bool fill = false, const Color& fillColor = Color::White());
+	void Draw(const AARectangle& rectangle, const Color& color, bool fill = false, const Color& fillColor = Color::White());
+	void Draw(const Circle& circle, const Color& color, bool fill = false, const Color& fillColor = Color::White());
 };
 
