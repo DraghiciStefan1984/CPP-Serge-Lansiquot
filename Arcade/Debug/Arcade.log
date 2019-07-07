@@ -1,8 +1,49 @@
-﻿  App.cpp
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\App.cpp(19,68): warning C4244:  'argument': conversion from 'uint32_t' to 'float', possible loss of data
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\App.cpp(19,50): warning C4244:  'argument': conversion from 'uint32_t' to 'float', possible loss of data
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\App.cpp(21,82): warning C4244:  'argument': conversion from 'uint32_t' to 'float', possible loss of data
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\App.cpp(21,55): warning C4244:  'argument': conversion from 'uint32_t' to 'float', possible loss of data
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\App.cpp(22,74): warning C4244:  'argument': conversion from 'uint32_t' to 'float', possible loss of data
-D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\App.cpp(22,47): warning C4244:  'argument': conversion from 'uint32_t' to 'float', possible loss of data
+﻿  AARectangle.cpp
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\AARectangle.cpp(51,108): warning C4244:  'argument': conversion from 'float' to 'unsigned int', possible loss of data
+  App.cpp
+  Arcade.cpp
+  ArcadeScene.cpp
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\AARectangle.cpp(51,70): warning C4244:  'argument': conversion from 'float' to 'unsigned int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\ArcadeScene.cpp(44,72): warning C4244:  'argument': conversion from 'uint32_t' to 'float', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\ArcadeScene.cpp(44,52): warning C4244:  'argument': conversion from 'uint32_t' to 'float', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\ArcadeScene.cpp(46,80): warning C4244:  'argument': conversion from 'uint32_t' to 'float', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\ArcadeScene.cpp(46,51): warning C4244:  'argument': conversion from 'uint32_t' to 'float', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\ArcadeScene.cpp(47,77): warning C4244:  'argument': conversion from 'uint32_t' to 'float', possible loss of data
+  Circle.cpp
+  Color.cpp
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\ArcadeScene.cpp(47,48): warning C4244:  'argument': conversion from 'uint32_t' to 'float', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Color.cpp(112,55): warning C4244:  'argument': conversion from 'float' to 'uint8_t', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Color.cpp(113,59): warning C4244:  'argument': conversion from 'float' to 'uint8_t', possible loss of data
+  FileCommandLoader.cpp
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Color.cpp(114,57): warning C4244:  'argument': conversion from 'float' to 'uint8_t', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\FileCommandLoader.cpp(99,22): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  GameController.cpp
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\FileCommandLoader.cpp(99,15): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\GameController.cpp(27,67): warning C4309:  'static_cast': truncation of constant value
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\GameController.cpp(29,68): warning C4309:  'static_cast': truncation of constant value
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\GameController.cpp(31,67): warning C4309:  'static_cast': truncation of constant value
+  GameScene.cpp
+  InputController.cpp
+  Line2D.cpp
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\GameController.cpp(33,65): warning C4309:  'static_cast': truncation of constant value
+  Screen.cpp
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Line2D.cpp(20,30): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(71,71): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(71,57): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(81,10): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(82,10): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(83,10): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(84,10): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(210,19): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+  ScreenBuffer.cpp
+  Shape.cpp
+  Triangle.cpp
+  Utils.cpp
+  Vec2D.cpp
+  Generating Code...
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(238,22): warning C4244:  'initializing': conversion from '_Ty' to 'int', possible loss of data
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(238,22): warning C4244:         with
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(238,22): warning C4244:         [
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(238,22): warning C4244:             _Ty=float
+D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Screen.cpp(238,22): warning C4244:         ]
   Arcade.vcxproj -> D:\C++ Projects\CPP-Serge-Lansiquot\Arcade\Debug\Arcade.exe
