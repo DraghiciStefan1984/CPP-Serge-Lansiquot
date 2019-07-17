@@ -166,9 +166,11 @@
     <ClCompile Include="App.cpp" />
     <ClCompile Include="Arcade.cpp" />
     <ClCompile Include="ArcadeScene.cpp" />
+    <ClCompile Include="BoundaryEdge.cpp" />
     <ClCompile Include="BreakOut.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Excluder.cpp" />
     <ClCompile Include="FileCommandLoader.cpp" />
     <ClCompile Include="GameController.cpp" />
     <ClCompile Include="GameScene.cpp" />
@@ -185,9 +187,11 @@
   <ItemGroup>
     <ClInclude Include="App.h" />
     <ClInclude Include="ArcadeScene.h" />
+    <ClInclude Include="BoundaryEdge.h" />
     <ClInclude Include="BreakOut.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="Excluder.h" />
     <ClInclude Include="FileCommandLoader.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameController.h" />

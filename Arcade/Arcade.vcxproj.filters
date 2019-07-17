@@ -69,6 +69,12 @@
     <ClCompile Include="BreakOut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Excluder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundaryEdge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Color.h">
@@ -129,6 +135,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BreakOut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Excluder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundaryEdge.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
