@@ -1,3 +1,10 @@
+/*
+ * ArcadeScene.cpp
+ *
+ *  Created on: Jan. 14, 2019
+ *      Author: serge
+ */
+
 #include "ArcadeScene.h"
 #include "Screen.h"
 #include "AARectangle.h"
@@ -8,7 +15,10 @@
 #include "GameController.h"
 #include <iostream>
 
-ArcadeScene::ArcadeScene() {}
+ArcadeScene::ArcadeScene()
+{
+
+}
 
 void ArcadeScene::Init()
 {
@@ -16,7 +26,7 @@ void ArcadeScene::Init()
 	action.key = GameController::ActionKey();
 	action.action = [](uint32_t dt, InputState state)
 	{
-		if (GameController::IsPressed(state))
+		if(GameController::IsPressed(state))
 		{
 			std::cout << "Action button was pressed!" << std::endl;
 		}
@@ -24,31 +34,40 @@ void ArcadeScene::Init()
 
 	mGameController.AddInputActionForKey(action);
 
+
 	MouseButtonAction mouseAction;
 	mouseAction.mouseButton = GameController::LeftMouseButton();
 	mouseAction.mouseInputAction = [](InputState state, const MousePosition& position)
 	{
-		if (GameController::IsPressed(state)) std::cout << "Left Mouse button pressed!" << std::endl;
+		if(GameController::IsPressed(state))
+		{
+			std::cout << "Left Mouse button pressed!"<<std::endl;
+		}
 	};
 
 	mGameController.AddMouseButtonAction(mouseAction);
-	mGameController.SetMouseMovedAction([](const MousePosition& mousePosition) {
+
+	mGameController.SetMouseMovedAction([](const MousePosition& mousePosition){
 		//std::cout << "Mouse position x: " << mousePosition.xPos << ", y: " << mousePosition.yPos << std::endl;
-		});
+	});
+
 }
 
-void ArcadeScene::Update(uint32_t dt) {}
+void ArcadeScene::Update(uint32_t dt)
+{
+}
 
 void ArcadeScene::Draw(Screen& theScreen)
 {
-	Line2D line = { Vec2D(0, 0), Vec2D(theScreen.Width(), theScreen.Height()) };
-	Triangle triangle = { Vec2D(60, 10), Vec2D(10, 110), Vec2D(110, 110) };
-	AARectangle rect = { Vec2D(theScreen.Width() / 2 - 25, theScreen.Height() / 2 - 25), 50, 50 };
-	Circle circle = { Vec2D(theScreen.Width() / 2 + 50, theScreen.Height() / 2 + 50), 50 };
+	Line2D line = {Vec2D(0, 0), Vec2D(theScreen.Width(), theScreen.Height())};
+	Triangle triangle = {Vec2D(60, 10), Vec2D(10, 110), Vec2D(110, 110)};
+	AARectangle rect = {Vec2D(theScreen.Width()/2 - 25, theScreen.Height()/2 - 25), 50, 50};
+	Circle circle = {Vec2D(theScreen.Width()/2 + 50, theScreen.Height()/2 + 50), 50};
 
 	theScreen.Draw(triangle, Color::Red(), true, Color::Red());
 	theScreen.Draw(rect, Color::Blue(), true, Color(0, 0, 255, 140));
 	theScreen.Draw(circle, Color(0, 255, 0, 150), true, Color(0, 255, 0, 150));
+
 }
 
 const std::string& ArcadeScene::GetSceneName() const
@@ -60,36 +79,36 @@ const std::string& ArcadeScene::GetSceneName() const
 
 std::unique_ptr<Scene> ArcadeScene::GetScene(eGame game)
 {
-	switch (game)
+	switch(game)
 	{
-	case TETRIS:
-	{
+		case TETRIS:
+		{
 
-	}
-	break;
+		}
+		break;
 
-	case BREAK_OUT:
-	{
+		case BREAK_OUT:
+		{
 
-	}
-	break;
+		}
+		break;
 
-	case ASTEROIDS:
-	{
+		case ASTEROIDS:
+		{
 
-	}
-	break;
+		}
+		break;
 
-	case PACMAN:
-	{
+		case PACMAN:
+		{
 
-	}
-	break;
-	default:
-	{
+		}
+		break;
+		default:
+		{
 
-	}
-	break;
+		}
+		break;
 	}
 
 	return nullptr;

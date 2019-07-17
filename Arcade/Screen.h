@@ -1,4 +1,13 @@
-#pragma once
+/*
+ * Screen.h
+ *
+ *  Created on: Jan. 10, 2019
+ *      Author: serge
+ */
+
+#ifndef GRAPHICS_SCREEN_H_
+#define GRAPHICS_SCREEN_H_
+
 #include <stdint.h>
 #include "ScreenBuffer.h"
 #include "Color.h"
@@ -21,9 +30,9 @@ public:
 	SDL_Window* Init(uint32_t w, uint32_t h, uint32_t mag);
 	void SwapScreens();
 
-	inline void SetClearColor(const Color& clearColor) { mClearColor = clearColor; }
-	inline uint32_t Width() const { return mWidth; }
-	inline uint32_t Height() const { return mHeight; }
+	inline void SetClearColor(const Color& clearColor) {mClearColor = clearColor;}
+	inline uint32_t Width() const {return mWidth;}
+	inline uint32_t Height() const {return mHeight;}
 
 	//Draw Methods go here
 
@@ -50,3 +59,7 @@ private:
 	SDL_Window* moptrWindow;
 	SDL_Surface* mnoptrWindowSurface;
 };
+
+
+
+#endif /* GRAPHICS_SCREEN_H_ */

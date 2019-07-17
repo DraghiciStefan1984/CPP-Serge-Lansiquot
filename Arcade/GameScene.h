@@ -1,9 +1,18 @@
-#pragma once
+/*
+ * GameScene.h
+ *
+ *  Created on: Jan. 14, 2019
+ *      Author: serge
+ */
+
+#ifndef SCENES_GAMESCENE_H_
+#define SCENES_GAMESCENE_H_
+
 #include "Scene.h"
 #include "Game.h"
 #include <memory>
 
-class GameScene : public Scene
+class GameScene: public Scene
 {
 public:
 
@@ -18,3 +27,5 @@ public:
 private:
 	std::unique_ptr<Game> mGame;
 };
+
+#endif /* SCENES_GAMESCENE_H_ */

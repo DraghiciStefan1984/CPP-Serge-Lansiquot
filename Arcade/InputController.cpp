@@ -1,18 +1,31 @@
+/*
+ * InputController.cpp
+ *
+ *  Created on: Jan. 14, 2019
+ *      Author: serge
+ */
+
 #include "InputController.h"
 #include <SDL.h>
 #include "GameController.h"
 
-InputController::InputController() :mQuit(nullptr), mnoptrCurrentController(nullptr) {}
+InputController::InputController():mQuit(nullptr), mnoptrCurrentController(nullptr)
+{
 
-void InputController::Init(InputAction quitAction) { mQuit = quitAction; }
+}
+
+void InputController::Init(InputAction quitAction)
+{
+	mQuit = quitAction;
+}
 
 void InputController::Update(uint32_t dt)
 {
 	SDL_Event sdlEvent;
 
-	while (SDL_PollEvent(&sdlEvent))
+	while(SDL_PollEvent(&sdlEvent))
 	{
-		switch (sdlEvent.type)
+		switch(sdlEvent.type)
 		{
 		case SDL_QUIT:
 		{
@@ -21,9 +34,9 @@ void InputController::Update(uint32_t dt)
 		break;
 		case SDL_MOUSEMOTION:
 		{
-			if (mnoptrCurrentController)
+			if(mnoptrCurrentController)
 			{
-				if (MouseMovedAction mouseMoved = mnoptrCurrentController->GetMouseMovedAction())
+				if(MouseMovedAction mouseMoved = mnoptrCurrentController->GetMouseMovedAction())
 				{
 					MousePosition position;
 					position.xPos = sdlEvent.motion.x;
@@ -35,7 +48,7 @@ void InputController::Update(uint32_t dt)
 		}
 		case SDL_MOUSEBUTTONUP:
 		case SDL_MOUSEBUTTONDOWN:
-			if (mnoptrCurrentController)
+			if(mnoptrCurrentController)
 			{
 				MouseInputAction action = mnoptrCurrentController->GetMouseButtonActionForMouseButton(static_cast<MouseButton>(sdlEvent.button.button));
 
@@ -49,7 +62,7 @@ void InputController::Update(uint32_t dt)
 		case SDL_KEYDOWN:
 		case SDL_KEYUP:
 
-			if (mnoptrCurrentController)
+			if(mnoptrCurrentController)
 			{
 				InputAction action = mnoptrCurrentController->GetActionForKey(sdlEvent.key.keysym.sym);
 
@@ -60,4 +73,7 @@ void InputController::Update(uint32_t dt)
 	}
 }
 
-void InputController::SetGameController(GameController* controller) { mnoptrCurrentController = controller; }
+void InputController::SetGameController(GameController* controller)
+{
+	mnoptrCurrentController = controller;
+}

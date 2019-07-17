@@ -1,4 +1,13 @@
-#pragma once
+/*
+ * ArcadeScene.h
+ *
+ *  Created on: Jan. 14, 2019
+ *      Author: serge
+ */
+
+#ifndef SCENES_ARCADESCENE_H_
+#define SCENES_ARCADESCENE_H_
+
 #include "Scene.h"
 #include <memory>
 
@@ -13,7 +22,7 @@ enum eGame
 
 class Screen;
 
-class ArcadeScene : public Scene
+class ArcadeScene: public Scene
 {
 public:
 	ArcadeScene();
@@ -25,3 +34,7 @@ public:
 private:
 	std::unique_ptr<Scene> GetScene(eGame game);
 };
+
+
+
+#endif /* SCENES_ARCADESCENE_H_ */

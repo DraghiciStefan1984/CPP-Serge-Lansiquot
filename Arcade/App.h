@@ -1,4 +1,13 @@
-#pragma once
+/*
+ * App.h
+ *
+ *  Created on: Jan. 14, 2019
+ *      Author: serge
+ */
+
+#ifndef APP_APP_H_
+#define APP_APP_H_
+
 #include "Screen.h"
 #include <stdint.h>
 #include <vector>
@@ -15,17 +24,23 @@ public:
 	bool Init(uint32_t width, uint32_t height, uint32_t mag);
 	void Run();
 
-	inline uint32_t Width() const { return mScreen.Width(); }
-	inline uint32_t Height() const { return mScreen.Height(); }
+	inline uint32_t Width() const {return mScreen.Width();}
+	inline uint32_t Height() const {return mScreen.Height();}
 
 	void PushScene(std::unique_ptr<Scene> scene);
 	void PopScene();
 	Scene* TopScene(); //current scene
 
+	static const std::string& GetBasePath();
+
 private:
 	Screen mScreen;
-	SDL_Window* mnoptrWindow;
+	SDL_Window * mnoptrWindow;
 
 	std::vector<std::unique_ptr<Scene>> mSceneStack;
 	InputController mInputController;
 };
+
+
+
+#endif /* APP_APP_H_ */

@@ -1,4 +1,14 @@
-#pragma once
+/*
+ * GameController.h
+ *
+ *  Created on: Jan. 14, 2019
+ *      Author: serge
+ */
+
+#ifndef INPUT_GAMECONTROLLER_H_
+#define INPUT_GAMECONTROLLER_H_
+
+
 #include "InputAction.h"
 #include <vector>
 
@@ -19,8 +29,8 @@ public:
 	static InputKey UpKey();
 	static InputKey DownKey();
 
-	inline const MouseMovedAction& GetMouseMovedAction() { return mMouseMovedAction; }
-	inline void SetMouseMovedAction(const MouseMovedAction& mouseMovedAction) { mMouseMovedAction = mouseMovedAction; }
+	inline const MouseMovedAction& GetMouseMovedAction() {return mMouseMovedAction;}
+	inline void SetMouseMovedAction(const MouseMovedAction&  mouseMovedAction) {mMouseMovedAction = mouseMovedAction;}
 
 	MouseInputAction GetMouseButtonActionForMouseButton(MouseButton button);
 	void AddMouseButtonAction(const MouseButtonAction& mouseButtonAction);
@@ -33,3 +43,8 @@ private:
 	std::vector<MouseButtonAction> mMouseButtonActions;
 	MouseMovedAction mMouseMovedAction;
 };
+
+
+
+
+#endif /* INPUT_GAMECONTROLLER_H_ */

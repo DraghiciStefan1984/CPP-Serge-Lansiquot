@@ -1,4 +1,13 @@
-#pragma once
+/*
+ * FileCommandLoader.h
+ *
+ *  Created on: Jan. 14, 2019
+ *      Author: serge
+ */
+
+#ifndef UTILS_FILECOMMANDLOADER_H_
+#define UTILS_FILECOMMANDLOADER_H_
+
 #include <functional>
 #include <vector>
 #include <string>
@@ -44,3 +53,5 @@ public:
 private:
 	std::vector<Command> mCommands;
 };
+
+#endif /* UTILS_FILECOMMANDLOADER_H_ */

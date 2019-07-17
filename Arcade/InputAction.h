@@ -1,4 +1,13 @@
-#pragma once
+/*
+ * InputAction.h
+ *
+ *  Created on: Jan. 14, 2019
+ *      Author: serge
+ */
+
+#ifndef INPUT_INPUTACTION_H_
+#define INPUT_INPUTACTION_H_
+
 #include <functional>
 #include <stdint.h>
 
@@ -14,7 +23,10 @@ struct ButtonAction
 	InputAction action;
 };
 
-struct MousePosition { int32_t xPos, yPos; };
+struct MousePosition
+{
+	int32_t xPos, yPos;
+};
 
 using MouseMovedAction = std::function<void(const MousePosition& mousePosition)>;
 using MouseInputAction = std::function<void(InputState state, const MousePosition& position)>;
@@ -24,3 +36,5 @@ struct MouseButtonAction
 	MouseButton mouseButton;
 	MouseInputAction mouseInputAction;
 };
+
+#endif /* INPUT_INPUTACTION_H_ */
