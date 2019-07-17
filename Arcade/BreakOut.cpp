@@ -181,7 +181,7 @@ void BreakOut::Draw(Screen& screen)
 
 	screen.Draw(mLevelBoundary.GetAARectangle(), Color::White());
 
-	Circle lifeCircle = {Vec2D(7, App::Singleton().Height() - 10), 5};
+	Circle lifeCircle = {Vec2D(7, float(App::Singleton().Height() - 10)), 5};
 
 	for(int i = 0; i < mLives; ++i)
 	{
@@ -199,16 +199,16 @@ const std::string& BreakOut::GetName() const
 void BreakOut::ResetGame(size_t toLevel)
 {
 	mLevels = BreakoutGameLevel::LoadLevelsFromFile(App::GetBasePath() + "Assets/BreakoutLevels.txt");
-	mYCutoff = App::Singleton().Height() - 2*Paddle::PADDLE_HEIGHT;
+	mYCutoff = float(App::Singleton().Height() - 2*Paddle::PADDLE_HEIGHT);
 	mLives = NUM_LIVES;
 	mCurrentLevel = toLevel;
-	AARectangle paddleRect = {Vec2D(App::Singleton().Width()/2 - Paddle::PADDLE_WIDTH/2, App::Singleton().Height() - 3*Paddle::PADDLE_HEIGHT), Paddle::PADDLE_WIDTH, Paddle::PADDLE_HEIGHT};
+	AARectangle paddleRect = {Vec2D(float(App::Singleton().Width()/2 - Paddle::PADDLE_WIDTH/2), float(App::Singleton().Height() - 3*Paddle::PADDLE_HEIGHT)), Paddle::PADDLE_WIDTH, Paddle::PADDLE_HEIGHT};
 	AARectangle levelBoundary = {Vec2D::Zero, App::Singleton().Width(), App::Singleton().Height()};
 
 	mLevelBoundary = {levelBoundary};
 
 	mPaddle.Init(paddleRect, levelBoundary);
-	mBall.MoveTo(Vec2D(App::Singleton().Width()/2, App::Singleton().Height() * 0.75f));
+	mBall.MoveTo(Vec2D(float(App::Singleton().Width()/2), float(App::Singleton().Height() * 0.75f)));
 
 	SetToServeState();
 }

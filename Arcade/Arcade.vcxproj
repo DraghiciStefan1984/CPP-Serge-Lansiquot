@@ -178,6 +178,7 @@
     <ClCompile Include="GameController.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="InputController.cpp" />
+    <ClCompile Include="LevelBoundary.cpp" />
     <ClCompile Include="Line2D.cpp" />
     <ClCompile Include="AARectangle.cpp" />
     <ClCompile Include="Paddle.cpp" />
@@ -205,6 +206,7 @@
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="InputAction.h" />
     <ClInclude Include="InputController.h" />
+    <ClInclude Include="LevelBoundary.h" />
     <ClInclude Include="Line2D.h" />
     <ClInclude Include="AARectangle.h" />
     <ClInclude Include="Paddle.h" />
