@@ -13,6 +13,8 @@
 #include "Color.h"
 #include <vector>
 
+using namespace std;
+
 class Vec2D;
 class Line2D;
 class Triangle;
@@ -20,6 +22,10 @@ class AARectangle;
 class Circle;
 struct SDL_Window;
 struct SDL_Surface;
+class BMPImage;
+class SpriteSheet;
+struct Sprite;
+
 
 class Screen
 {
@@ -42,6 +48,8 @@ public:
 	void Draw(const Triangle& triangle, const Color& color, bool fill = false, const Color& fillColor = Color::White());
 	void Draw(const AARectangle& rect, const Color& color, bool fill = false, const Color& fillColor = Color::White());
 	void Draw(const Circle& circle, const Color& color, bool fill = false, const Color& fillColor = Color::White());
+	void Draw(const BMPImage& image, const Sprite& sprite, const Vec2D& pos);
+	void Draw(const SpriteSheet& ss, const string& spriteName, const Vec2D& pos);
 
 private:
 

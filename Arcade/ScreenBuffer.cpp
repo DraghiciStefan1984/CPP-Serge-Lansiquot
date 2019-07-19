@@ -10,10 +10,7 @@
 #include <SDL.h>
 #include <cassert>
 
-ScreenBuffer::ScreenBuffer(): mSurface(nullptr)
-{
-
-}
+ScreenBuffer::ScreenBuffer() : mSurface(nullptr) {}
 
 ScreenBuffer::ScreenBuffer(const ScreenBuffer& screenBuffer)
 {
